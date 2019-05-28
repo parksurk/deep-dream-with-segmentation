@@ -55,7 +55,7 @@ git clone https://github.com/parksurk/deep-dream-with-segmentation
 5.	Install Python Scientific Libraries
 
 ```
-pip install jupyter numpy tensorflow
+pip install jupyter numpy tensorflow pillow
 ```
 
 6. Install [RISE](https://github.com/damianavila/RISE) - Jupyter notebook slideshow library (Optional for Presenter)
