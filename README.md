@@ -1,7 +1,6 @@
-Deep Dream with Image Segmentation
+Image Segmentation + Style Transfer + Deep Dream = 꿈속의 꿈
 ================================
-
-Experiment Deep Dream using Image Segmentation
+Modulabs DLC - CreativedAI VideoLab 한정협, 김준화, 박석
 -------------------------------------------
 
 ---
@@ -11,11 +10,29 @@ Experiment Deep Dream using Image Segmentation
 
 For this project, we are inspired from 'Deep Dream' by Alexander Mordvintsev https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/tutorials/deepdream
 
-- Our Experiment Idea : Google Deep Dream 사례를 보면… ImageNet DataSet을 CNN으로 학습한 ‘Image Classification’  Pretrained Model 을 가져와 CNN의 특정 Feature Channel을 선택한 후 원본 이미지에 해당 Feature를 부각시켜 새로운 Image를 Generation 했습니다.
-저희의 Idae는 Deep Dream 사례를 ‘Image Classification’  Pretained Model 이 아닌 CNN기반의 ‘Image Segmentation’ Pretrained Mdel을 가져와서 실험해서 좀 더 재밌는 결과를 얻는 것입니다.
-- Image Segmentation reference(DeepLab V3+) : https://github.com/bonlime/keras-deeplab-v3-plus
-- DeepLab V3+ Pretrained Medel 사용 사례 : https://medium.com/hyunjulie/2%ED%8E%B8-%EB%91%90-%EC%A0%91%EA%B7%BC%EC%9D%98-%EC%A0%91%EC%A0%90-deeplab-v3-ef7316d4209d
+# 1. 어떤 것을 하고 싶은지? 주제
 
+- Image Segmentation + Style Transfer + Deep Dream = 꿈속의 꿈
+- 사람과 배경이 있는 이미지에서 배경에만 Style Transfer 와 Deep Dream 을 적용하여, 사람 영역에 괴기스럽게 변하는 단점을 보완하여 좀 더 자연스러운 이미지를 Generation하고자 함.
+
+# 2. 어떻게 만들 것인지 : 어떤 알고리즘을 사용하고 싶고, 어떤 데이터셋을 이용할 것인가?
+
+1. Image Segmentation (DeepLab V3+) : [https://github.com/bonlime/keras-deeplab-v3-plus](https://github.com/bonlime/keras-deeplab-v3-plus)
+2. Style Transfer (Neural Transfer using PyTorch) : [https://pytorch.org/tutorials/advanced/neural_style_tutorial.html](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
+3. Deep Dream (GoogLeNet) :  [https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/tutorials/deepdream](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/tutorials/deepdream)
+
+# 3. 그렇게 생각하게 된 이유는?
+
+- 원본이미지 → "Image Segmentation" → "사람 영역 One-Hot Vector", "배경 영역 One-Hot Vector"
+- 원본이미지 → "Style Transfer" → 특정 Style이 적용된 이미지
+- 특정 Style이 적용된 이미지 → "Deep Dream" → 몽환적 분위기 이미지
+- 몽환적 분위기 이미지 → "Additional Image Processing" → 몽환적 분위기 이미지 + 원본 사람 영역이 치환된 좀 더 자연스러운 이미지
+
+# 4. 사용할 데이터셋 : 작업의 특징을 고려한 데이터셋
+
+1. Image Segmentation (DeepLab V3+) : COCO & JFT
+2. Style Transfer (Neural Transfer using PyTorch) : vgg19
+3. Deep Dream (GoogLeNet) : Imagenet
 ---
 
 ### Instructions
