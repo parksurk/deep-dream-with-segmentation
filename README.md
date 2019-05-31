@@ -1,6 +1,6 @@
 Image Segmentation + Style Transfer + Deep Dream = 꿈속의 꿈
 ================================
-Modulabs DLC - CreativedAI VideoLab 한정협, 김준화, 박석
+Modulabs DLC - CreativeAI VideoLab 한정협, 김준화, 박석
 -------------------------------------------
 
 ---
@@ -13,7 +13,7 @@ For this project, we are inspired from 'Deep Dream' by Alexander Mordvintsev htt
 # 1. 어떤 것을 하고 싶은지? 주제
 
 - Image Segmentation + Style Transfer + Deep Dream = 꿈속의 꿈
-- 사람과 배경이 있는 이미지에서 배경에만 Style Transfer 와 Deep Dream 을 적용하여, 사람 영역에 괴기스럽게 변하는 단점을 보완하여 좀 더 자연스러운 이미지를 Generation하고자 함.
+- 사람과 배경이 있는 이미지에서 배경에만 Style Transfer 와 Deep Dream 을 적용하여, 사람 영역의 이미지가 괴기스럽게 변하는 단점을 보완하여 좀 더 자연스러운 이미지를 Generation하고자 함.
 
 # 2. 어떻게 만들 것인지 : 어떤 알고리즘을 사용하고 싶고, 어떤 데이터셋을 이용할 것인가?
 
